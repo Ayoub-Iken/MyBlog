@@ -5,13 +5,17 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Ek+Mukta' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Crimson+Text:600' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
  <%= render 'layouts/header' %>
-
   <div class="container">
+<!-- <%= content_tag(:div, flash[:error], :class => "alert alert-danger alert-dismissable") if flash[:error] %>
+<%= content_tag(:div, flash[:notice], :class => "alert alert-sucess alert-dismissable") if flash[:notice] %>
+<%= content_tag(:div, flash[:alert], :class => "alert alert-warning alert-dismissable") if flash[:alert] %> -->
+
     <%= yield %>
     <%= render 'layouts/footer' %>
   </div>

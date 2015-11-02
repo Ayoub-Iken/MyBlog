@@ -104,6 +104,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow:visible;
 }
 
 //  ************************************* Nav Bar Style
@@ -112,18 +113,18 @@ body {
     background: transparent;
     border-width: 0px;
     margin-top: 10px;
+
     a{
       color: white;
       font-weight: lighter;
       font-size: 16px;
       letter-spacing: 1px;
-      &:hover
-      {
-        background: transparent;
-        background-color: transparent;
-        border-bottom: 4px solid #000;
-        color: #000;
+      text-decoration: none;
+      &:hover, &:focus{
+        background: none !important;
+        background-color: none !important;
       }
+
     }
 
     ul {
@@ -132,12 +133,17 @@ body {
         margin-right: 5px;
         text-decoration: none;
         &:hover{
-          background: red;
-          background-color: red;
+          background: transparent !important;
+          background-color: transparent !important;
+          border-bottom: 1px solid white;
         }
       }
 
     }
+}
+
+.selecte{
+  border-bottom: 1px solid white !important;
 }
 
 #logo {
@@ -159,7 +165,7 @@ body {
 // *************** footer
 
 footer {
-      margin-top: 200px;
+      margin-top: 100px;
       padding-top: 5px;
       border-top: 1px solid #E4E4E4;
       color: white;
@@ -183,3 +189,56 @@ footer {
             }
           }
     }
+
+// ****************************************** Sign up page
+
+.signuptitle{
+  font-family: 'Poiret One', cursive;
+  color: #CEE3F4;
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+form {
+  label{
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    color: white;
+    }
+  #fnamefield{
+    padding-left: 0;
+  }
+  #lnamefield{
+    padding-right: 0;
+  }
+  input:not([type=submit]){
+    background-color: transparent !important;
+    color:white;
+    font-family: "Ek Mukta", sans-serif;
+    border: none;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid white;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+  }
+}
+.signup{
+  margin-top: 10px;
+}
+
+
+ .field_with_errors {
+  @extend .has-error;
+  .form-control {
+    border-color: #a94442;
+  }
+}
+
+.panel{
+  background-color: rgba(69,102,127,0.5) !important;
+}
+.panel-footer{
+  background-color: rgba(215,237,255,0.8) !important;
+}

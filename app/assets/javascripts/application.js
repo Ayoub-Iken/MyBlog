@@ -15,3 +15,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree
+jquery( document ).ready(function() {
+
+  var $el = $("#navlist li");
+
+  $el.click(function(){
+
+    $(this).addClass("selecte");
+    $("#navlist li.selecte").removeClass("selecte");
+  });
+});
